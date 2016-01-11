@@ -1,4 +1,4 @@
-#!env/bin/python
+#!/usr/bin/python -u
 import os
 import redis
 import traceback
