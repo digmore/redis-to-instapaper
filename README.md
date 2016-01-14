@@ -7,7 +7,7 @@ redis-to-instapaper is a Python application which will subscribe to a Redis chan
 
 # How to use this image
 
-This redis-to-instapaper container must be linked to a redis container (which must have the alias `redis`). Instapaper account credentials must be supplied as environment variables. 
+This redis-to-instapaper container must be linked to a [redis](https://hub.docker.com/_/redis/) container (which must have the alias `redis`). Instapaper account credentials must be supplied as environment variables. 
 
     docker run --name redis-to-instapaper --link redis:redis -e USERNAME='username' -e PASSWORD='password' -d digmore/redis-to-instapaper
 
