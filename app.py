@@ -2,6 +2,7 @@
 import os
 import redis
 import traceback
+import validators
 from instapaperlib import Instapaper
 
 config = {
@@ -29,7 +30,7 @@ except:
 try:
     while True:
         for item in red_pubsub.listen():
-            if str(item['data']).lower().startswith('http'):
+            if (str(item['data']).lower().split(":")[0] in ['http', 'https']) and validators.url(item['data']):
                 print "Adding item: " , item['data']
                 (statuscode, statusmessage) = i.add_item(item['data'])
                 print "Instapaper response: ", statuscode, statusmessage
