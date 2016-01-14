@@ -3,7 +3,6 @@ FROM debian:jessie
 
 RUN apt-get update \
         && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-                patch \
                 python-pip \
         && rm -fr /var/lib/apt/lists/* \
         && rm -fr /tmp/* \

@@ -19,7 +19,7 @@ ENVIRONMENT VARIABLES (only available with `docker run`)
 
  * `USERNAME` - Set the username for the Instapaper account (required)
  * `PASSWORD` - Set the password for the Instapaper account (optional)
- * `CHANNEL` - Set the Redis channel name to subscribe to (option, defaults to `instapaper`)
+ * `CHANNEL` - Set the Redis channel name to subscribe to (optional, defaults to `instapaper`)
 
 # User Feedback
 
