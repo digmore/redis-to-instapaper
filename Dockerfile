@@ -9,9 +9,6 @@ RUN apt-get update \
         && rm -fr /tmp/* \
         && rm -fr /var/tmp/*
 
-COPY instapaperlib.py.diff /tmp/
 RUN pip install instapaperlib redis
-# For like temporary
-RUN patch -p0 < /tmp/instapaperlib.py.diff
 COPY app.py /opt/
 ENTRYPOINT ["/opt/app.py"]
