@@ -8,6 +8,6 @@ RUN apt-get update \
         && rm -fr /tmp/* \
         && rm -fr /var/tmp/*
 
-RUN pip install instapaperlib redis
+RUN pip install instapaperlib redis validators
 COPY app.py /opt/
 ENTRYPOINT ["/opt/app.py"]
